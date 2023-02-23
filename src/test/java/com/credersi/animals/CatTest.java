@@ -32,5 +32,19 @@ public class CatTest {
 	
 	
 	
+	private int slap(Roar roarer) {
+		return roarer.roar();
+	}
+	
+	@Test
+	public void testCatRoar() {
+		Roar wolf = new Wolf();
+		Roar lynx = new Lynx();
+		
+		
+		assertEquals(this.slap(wolf), 90);
+		assertEquals(this.slap(lynx), 10);
+	}
+
 	
 }
